@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.head {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 3rem;
+}
+.head ul {
+  list-style: none;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.App-link {
-  color: #61dafb;
+.head ul .Nav__link {
+  margin-right: 2.5em;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  text-decoration: none;
+}
+nav ul li a.active {
+  border-bottom: 2px solid #000; /* Add bottom border to active link */
+}
+.head ul .Active__link {
+  color: black;
+  border-bottom: solid #009bc0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li:hover {
+  border-bottom: solid #009bc0;
+}
+
+/* The Content-box Styling */
+
+.Stories__head {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: 64.329px;
+  line-height: 146.5%;
+  color: #000000;
+}
+
+.content__box {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 5rem;
+  padding-right: 3rem;
+}
+
+.experience {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 100px;
+  letter-spacing: 0.035em;
+  color: #009bc0;
+  margin-bottom: 0.4em;
+}
+
+.content__box > p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 60%;
+  margin: auto;
+  line-height: 30px;
+  letter-spacing: 0.035em;
+  color: rgba(27, 56, 84, 0.8);
+}
+
+.slider {
+  position: relative;
+  width: 60%;
+  margin: auto;
+}
+
+.carousel-real {
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.8rem;
+  width: 50rem;
+  height: 490.57px;
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.64);
+  background-repeat: no-repeat;
+  border-radius: 0.8rem;
+  position: fixed;
+  width: 50rem;
+  height: 490.57px;
+}
+
+.innerContent {
+  position: relative;
+  padding: 3rem;
+  top: 16rem;
+  line-height: 1.5;
+}
+
+.innerContent > h4 {
+  color: rgba(255, 255, 255, 0.44);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.innerContent > h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.innerContent > p {
+  color: rgba(255, 255, 255, 0.44);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+/* ///////////////////////////csss carousel//////////////////////////// */
+.prevArrow {
+  background: url("./assets/Vector-l.svg");
+  width: 5rem;
+  height: 6rem;
+  background-repeat: no-repeat;
+  border: none;
+  position: absolute;
+  left: -6rem;
+  top: 12rem;
+  cursor: pointer;
+}
+
+.NextArrow {
+  background: url("./assets/Vector.svg");
+  width: 5rem;
+  height: 6rem;
+  background-repeat: no-repeat;
+  border: none;
+  position: absolute;
+  right: -7rem;
+  top: 12rem;
+  cursor: pointer;
+}
+
+/* Footer styling */
+
+.Footer {
+  background: #1b3854;
+  margin-top: 8rem;
+  padding-top: 3rem;
+  padding-right: 4rem;
+  padding-bottom: 3rem;
+  padding-left: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #ffffff;
+}
+.get-in-touch h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.get-in-touch > img {
+  margin-right: 1rem;
+  margin-top: auto;
+}
+
+.alluvim--lab > p {
+  color: rgba(255, 255, 255, 0.44);
+}
+
+.contact .lorem {
+  width: 15rem;
+}
+
+.contact p {
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 0.8rem;
+}
+
+.contact h3 {
+  font-size: 1.5rem;
+}
+
+/* /////////Styling the blog section//////////// */
+.Blog {
+  margin-top: 5rem;
+  text-align: start;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.Blog h1 {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 100px;
+  color: #009bc0;
+  margin-bottom: 2rem;
+}
+
+.Blog span {
+  color: #1b3854;
+}
+
+.blogs {
+  border: 2px solid rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blogs h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.035em;
+  color: rgba(0, 0, 0, 0.44);
+  margin-bottom: 1rem;
+}
+
+.blogs h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.blogs p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.Add__Blog {
+  position: absolute;
+  right: -12rem;
+  bottom: 3rem;
+  width: 9rem;
+  cursor: pointer;
 }
