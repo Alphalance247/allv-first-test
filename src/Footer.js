@@ -12,10 +12,11 @@ const Footer = () => {
       </div>
       <div className="get-in-touch">
         <h4>Get in touch</h4>
-
-        <img src={facebook} alt="" />
-        <img src={twitter} alt="" />
-        <img src={instagram} alt="" />
+        <div className="footer-social">
+          <img src={facebook} alt="" />
+          <img src={twitter} alt="" />
+          <img src={instagram} alt="" />
+        </div>
       </div>
       <div className="contact">
         <h3>Contact us</h3>

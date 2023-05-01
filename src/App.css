@@ -3,7 +3,14 @@
   justify-content: space-between;
   padding-left: 5rem;
   padding-right: 3rem;
+  padding-top: 2rem;
 }
+
+.head .menu--button,
+.back--button {
+  display: none;
+}
+
 .head ul {
   list-style: none;
   display: flex;
@@ -17,9 +24,7 @@
   font-size: 24px;
   text-decoration: none;
 }
-nav ul li a.active {
-  border-bottom: 2px solid #000; /* Add bottom border to active link */
-}
+
 .head ul .Active__link {
   color: black;
   border-bottom: solid #009bc0;
@@ -30,15 +35,6 @@ li:hover {
 }
 
 /* The Content-box Styling */
-
-.Stories__head {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  font-size: 64.329px;
-  line-height: 146.5%;
-  color: #000000;
-}
 
 .content__box {
   text-align: center;
@@ -68,28 +64,42 @@ li:hover {
   color: rgba(27, 56, 84, 0.8);
 }
 
+.Stories__head {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: 64.329px;
+  line-height: 146.5%;
+  color: #000000;
+}
+
+/* ///////////////// carousel section//////////////// */
+
 .slider {
   position: relative;
   width: 60%;
   margin: auto;
+  border-radius: 10px;
+  border: 2px solid rgba(27, 56, 84, 0.8);
 }
 
 .carousel-real {
   background-position: center;
   background-size: cover;
-  border-radius: 0.8rem;
-  width: 50rem;
-  height: 490.57px;
-  margin-bottom: 2rem;
+  width: 51rem;
+  height: 495.57px;
+  position: relative;
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.64);
   background-repeat: no-repeat;
-  border-radius: 0.8rem;
   position: fixed;
-  width: 50rem;
-  height: 490.57px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
 }
 
 .innerContent {
@@ -97,6 +107,8 @@ li:hover {
   padding: 3rem;
   top: 16rem;
   line-height: 1.5;
+
+  z-index: 99;
 }
 
 .innerContent > h4 {
@@ -118,15 +130,15 @@ li:hover {
   font-size: 1.3rem;
   line-height: 30px;
   font-weight: 400;
+  width: 90%;
 }
 
 /* ///////////////////////////csss carousel//////////////////////////// */
 .prevArrow {
-  background: url("./assets/Vector-l.svg");
-  width: 5rem;
-  height: 6rem;
-  background-repeat: no-repeat;
+  /* background: url("./assets/Vector-l.svg");
+  background-repeat: no-repeat; */
   border: none;
+  background: none;
   position: absolute;
   left: -6rem;
   top: 12rem;
@@ -134,11 +146,12 @@ li:hover {
 }
 
 .NextArrow {
-  background: url("./assets/Vector.svg");
+  /* background: url("./assets/Vector.svg");
   width: 5rem;
   height: 6rem;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   border: none;
+  background: none;
   position: absolute;
   right: -7rem;
   top: 12rem;
@@ -163,9 +176,12 @@ li:hover {
   margin-bottom: 1rem;
 }
 
-.get-in-touch > img {
+.footer-social {
+  display: flex;
+}
+
+.footer-social > img {
   margin-right: 1rem;
-  margin-top: auto;
 }
 
 .alluvim--lab > p {
@@ -244,4 +260,418 @@ li:hover {
   bottom: 3rem;
   width: 9rem;
   cursor: pointer;
+}
+
+/* ////////////////RESPONSIVENESS FOR TAB//////////////// */
+
+@media only screen and (max-width: 75rem) {
+  .head {
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+
+  .head ul .Nav__link {
+    margin-right: 2.5em;
+    line-height: 30px;
+    color: blue;
+    font-size: 20px;
+  }
+
+  .content__box {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 5rem;
+    padding-right: 3rem;
+  }
+
+  .experience {
+    font-size: 3rem;
+  }
+
+  .Stories__head {
+    font-size: 50px;
+  }
+
+  .content__box > p {
+    font-size: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  /* //////////// responsive-carousel////////////////// */
+
+  .innerContent > h4 {
+    font-size: 1.3rem;
+  }
+
+  .innerContent > h2 {
+    font-size: 2rem;
+  }
+
+  .innerContent > p {
+    color: rgba(255, 255, 255, 0.44);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 30px;
+    font-weight: 400;
+    width: 70%;
+  }
+
+  /* /////////////////blog section styling///////////////// */
+  .Blog {
+    margin-top: 4rem;
+    width: 70%;
+  }
+
+  .Blog h1 {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 70px;
+  }
+
+  .blogs p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .Add__Blog {
+    position: absolute;
+    right: -9rem;
+    bottom: 3rem;
+    width: 9rem;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 67rem) {
+  .head ul .Nav__link {
+    margin-right: 2.5em;
+    line-height: 30px;
+    font-size: 1.2rem;
+    color: yellow;
+  }
+
+  /* //////////////content box//////////////////// */
+  .content__box {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+
+  .experience {
+    font-size: 2.5rem;
+  }
+
+  .Stories__head {
+    font-size: 2rem;
+  }
+
+  /* /////////////////////carousel slider///////////////////// */
+
+  .slider {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(27, 56, 84, 0.8);
+  }
+
+  .slide--1 {
+    width: 100rem;
+    height: 400px;
+  }
+
+  .innerContent {
+    position: relative;
+    padding: 1rem;
+    top: 10rem;
+    line-height: 1.5;
+  }
+
+  .innerContent > h4 {
+    font-size: 1.3rem;
+  }
+
+  .innerContent > h2 {
+    font-size: 1.6rem;
+  }
+
+  .innerContent > p {
+    color: rgba(255, 255, 255, 0.44);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 30px;
+    font-weight: 400;
+    width: 55%;
+  }
+
+  .prevArrow {
+    left: -6rem;
+    top: 9rem;
+  }
+
+  .NextArrow {
+    right: -6rem;
+    top: 9rem;
+  }
+
+  /* Footer styling */
+
+  .Footer {
+    margin-top: 6rem;
+    padding: 1.5rem;
+  }
+  .get-in-touch h4 {
+    font-size: 1.3rem;
+  }
+
+  .contact .lorem {
+    width: 17rem;
+  }
+
+  .contact h3 {
+    font-size: 1.3rem;
+  }
+
+  /* //////////////////the blog styling////////////////// */
+
+  .Blog {
+    margin-top: 4rem;
+    width: 80%;
+    margin-left: 1.5rem;
+  }
+
+  .Blog h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 70px;
+  }
+
+  .blogs {
+    border: 2px solid rgba(0, 0, 0, 0.14);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .blogs h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+
+  .blogs p {
+    font-size: 1rem;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .Add__Blog {
+    position: absolute;
+    right: -6rem;
+    bottom: 3rem;
+    width: 6rem;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .head {
+    display: block;
+    padding: 0;
+  }
+
+  .nav--button {
+    padding: 1rem;
+  }
+
+  .head .menu--button {
+    display: block;
+    cursor: pointer;
+    width: 3rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav--button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .back--button {
+    width: 3rem;
+    display: block;
+    cursor: pointer;
+  }
+
+  .head ul .Nav__link {
+    margin-right: 2.5em;
+    line-height: 30px;
+    font-size: 1.2rem;
+    color: green;
+  }
+
+  .head .Nav--link {
+    list-style: none;
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    background-color: yellow;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .head ul {
+    display: none;
+  }
+
+  /* //////////////////content box styling////////////////// */
+  .content__box {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+
+  .experience {
+    font-size: 1.6rem;
+  }
+
+  .content__box > p {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .Stories__head {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* //////////////////slider styling////////////////// */
+  .slider {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(27, 56, 84, 0.8);
+  }
+
+  .slide--1 {
+    height: 360px;
+  }
+
+  .innerContent {
+    position: relative;
+    top: 8.5rem;
+    padding-left: 1rem;
+    line-height: 1.5;
+  }
+
+  .innerContent > h4 {
+    font-size: 1rem;
+  }
+
+  .innerContent > h2 {
+    font-size: 1.2rem;
+  }
+
+  .innerContent > p {
+    color: rgba(255, 255, 255, 0.44);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 30px;
+    font-weight: 400;
+    width: 40%;
+  }
+
+  .prevArrow {
+    left: -2rem;
+    top: 9rem;
+    z-index: 99;
+  }
+
+  .NextArrow {
+    right: -2rem;
+    top: 9rem;
+    z-index: 99;
+  }
+
+  .prevArrow img {
+    width: 1rem;
+    height: 4rem;
+  }
+
+  .NextArrow img {
+    width: 1rem;
+    height: 4rem;
+  }
+  /* //////////////////blog post styling////////////////// */
+
+  .Blog h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .blogs h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .blogs h4 {
+    margin-bottom: 0.4rem;
+  }
+
+  .blogs p {
+    font-size: 0.9rem;
+  }
+
+  .Add__Blog {
+    right: -4rem;
+    width: 4rem;
+  }
+  /* /////////////// the border styling///////////// */
+  .Footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  .get-in-touch h4 {
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-social > img {
+    margin-right: 1rem;
+  }
+
+  .contact .lorem {
+    width: 100%;
+  }
+
+  .contact p {
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 0.4rem;
+  }
+
+  .contact h3 {
+    font-size: 1.5rem;
+  }
 }

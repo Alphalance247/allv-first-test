@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-
+import vectors from "./assets/Vector.svg";
+import vector1 from "./assets/Vector-l.svg";
 const Story = (props) => {
   const settings = {
     dots: true,
@@ -17,14 +18,18 @@ const Story = (props) => {
       <button
         className="prevArrow"
         onClick={() => slider?.current?.slickPrev()}
-      ></button>
+      >
+        <img src={vector1} alt="" />
+      </button>
       <button
         className="NextArrow"
         onClick={() => slider?.current?.slickNext()}
-      ></button>
+      >
+        <img src={vectors} alt="" />
+      </button>
       {/* slider--1 */}
       <Slider ref={slider} {...settings}>
-        <div className="slide--1">
+        <div className="slide--1" style={{ width: "100rem", height: "30rem" }}>
           <div
             className="carousel-real"
             style={{ backgroundImage: `url(${props.backgroundImage})` }}
@@ -85,7 +90,7 @@ const Story = (props) => {
             style={{ backgroundImage: `url(${props.backgroundImage})` }}
             {...settings}
           >
-            <div className="overlay "></div>
+            <div className="overlay"></div>
             <div className="innerContent">
               <h4>{props.useDate}</h4>
 
