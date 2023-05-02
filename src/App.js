@@ -19,7 +19,7 @@ const getDate = date.toDateString();
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
       {/* <Nav /> */}
       <Routes>

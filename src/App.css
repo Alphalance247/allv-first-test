@@ -1,4 +1,4 @@
-.head {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   padding-left: 5rem;
@@ -6,18 +6,18 @@
   padding-top: 2rem;
 }
 
-.head .menu--button,
+.navbar .menu--button,
 .back--button {
   display: none;
 }
 
-.head ul {
+.navbar .nav--links {
   list-style: none;
   display: flex;
   font-family: "Times New Roman", Times, serif;
 }
 
-.head ul .Nav__link {
+.navbar ul .Nav__link {
   margin-right: 2.5em;
   line-height: 36px;
   color: rgba(0, 0, 0, 0.5);
@@ -25,16 +25,48 @@
   text-decoration: none;
 }
 
-.head ul .Active__link {
+.navbar ul .Active__link {
   color: black;
   border-bottom: solid #009bc0;
 }
 
 li:hover {
   border-bottom: solid #009bc0;
-}
+} */
 
 /* The Content-box Styling */
+
+.navbar {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  background-color: blue;
+}
+
+.nav--links {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  width: 75%;
+}
+
+.home,
+.blog-nav,
+.contact-nav {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0, 10px;
+  cursor: pointer;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+/* ////////////////////////content box////////////////////////// */
 
 .content__box {
   text-align: center;
@@ -265,12 +297,12 @@ li:hover {
 /* ////////////////RESPONSIVENESS FOR TAB//////////////// */
 
 @media only screen and (max-width: 75rem) {
-  .head {
+  .navbar {
     padding-left: 3rem;
     padding-right: 2rem;
   }
 
-  .head ul .Nav__link {
+  .navbar ul .Nav__link {
     margin-right: 2.5em;
     line-height: 30px;
     color: blue;
@@ -347,7 +379,7 @@ li:hover {
 }
 
 @media only screen and (max-width: 67rem) {
-  .head ul .Nav__link {
+  .navbar ul .Nav__link {
     margin-right: 2.5em;
     line-height: 30px;
     font-size: 1.2rem;
@@ -483,7 +515,7 @@ li:hover {
 }
 
 @media only screen and (max-width: 40rem) {
-  .head {
+  /* .navbar {
     display: block;
     padding: 0;
   }
@@ -492,11 +524,10 @@ li:hover {
     padding: 1rem;
   }
 
-  .head .menu--button {
+  .navbar .menu--button {
     display: block;
     cursor: pointer;
     width: 3rem;
-    transition: all 0.3s ease-in-out;
   }
 
   .nav--button {
@@ -530,6 +561,47 @@ li:hover {
 
   .head ul {
     display: none;
+  } */
+
+  .nav--links {
+    display: none;
+  }
+
+  .nav--button img {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+  }
+
+  .nav--links-mobile {
+    position: absolute;
+    display: block;
+    background: blue;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    transition: all 15s ease-in;
+  }
+
+  .home,
+  .blog-nav,
+  .contact-nav {
+    padding: 32px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    transition: all 0.15s ease-in;
+    cursor: pointer;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
   }
 
   /* //////////////////content box styling////////////////// */
