@@ -1,4 +1,4 @@
-/* .navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   padding-left: 5rem;
@@ -6,8 +6,7 @@
   padding-top: 2rem;
 }
 
-.navbar .menu--button,
-.back--button {
+.mobile-menu-icon {
   display: none;
 }
 
@@ -15,6 +14,7 @@
   list-style: none;
   display: flex;
   font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
 }
 
 .navbar ul .Nav__link {
@@ -23,6 +23,7 @@
   color: rgba(0, 0, 0, 0.5);
   font-size: 24px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navbar ul .Active__link {
@@ -32,41 +33,9 @@
 
 li:hover {
   border-bottom: solid #009bc0;
-} */
+}
 
 /* The Content-box Styling */
-
-.navbar {
-  padding: 2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 75px;
-  background-color: blue;
-}
-
-.nav--links {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  width: 75%;
-}
-
-.home,
-.blog-nav,
-.contact-nav {
-  text-decoration: none;
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 0, 10px;
-  cursor: pointer;
-}
-
-.mobile-menu-icon {
-  display: none;
-}
-
-/* ////////////////////////content box////////////////////////// */
 
 .content__box {
   text-align: center;
@@ -116,6 +85,7 @@ li:hover {
 }
 
 .carousel-real {
+  background: url("./assets/unsplash.svg");
   background-position: center;
   background-size: cover;
   width: 51rem;
@@ -167,8 +137,6 @@ li:hover {
 
 /* ///////////////////////////csss carousel//////////////////////////// */
 .prevArrow {
-  /* background: url("./assets/Vector-l.svg");
-  background-repeat: no-repeat; */
   border: none;
   background: none;
   position: absolute;
@@ -178,10 +146,6 @@ li:hover {
 }
 
 .NextArrow {
-  /* background: url("./assets/Vector.svg");
-  width: 5rem;
-  height: 6rem;
-  background-repeat: no-repeat; */
   border: none;
   background: none;
   position: absolute;
@@ -305,7 +269,6 @@ li:hover {
   .navbar ul .Nav__link {
     margin-right: 2.5em;
     line-height: 30px;
-    color: blue;
     font-size: 20px;
   }
 
@@ -383,7 +346,6 @@ li:hover {
     margin-right: 2.5em;
     line-height: 30px;
     font-size: 1.2rem;
-    color: yellow;
   }
 
   /* //////////////content box//////////////////// */
@@ -515,93 +477,51 @@ li:hover {
 }
 
 @media only screen and (max-width: 40rem) {
-  /* .navbar {
+  .navbar {
     display: block;
     padding: 0;
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
   }
 
-  .nav--button {
-    padding: 1rem;
-  }
-
-  .navbar .menu--button {
-    display: block;
-    cursor: pointer;
-    width: 3rem;
-  }
-
-  .nav--button {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .back--button {
-    width: 3rem;
-    display: block;
-    cursor: pointer;
-  }
-
-  .head ul .Nav__link {
+  .navbar ul .Nav__link {
     margin-right: 2.5em;
     line-height: 30px;
     font-size: 1.2rem;
-    color: green;
+    color: #ffffff;
   }
 
-  .head .Nav--link {
-    list-style: none;
-    display: block;
-    font-family: "Times New Roman", Times, serif;
-    background-color: yellow;
-    width: 100%;
-    height: 100vh;
-    padding: 2rem;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .head ul {
-    display: none;
-  } */
-
-  .nav--links {
-    display: none;
-  }
-
-  .nav--button img {
-    position: absolute;
-    left: 2rem;
-    top: 1rem;
+  .navbar img {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    width: 6rem;
+    height: 4rem;
   }
 
   .nav--links-mobile {
-    position: absolute;
+    list-style: none;
     display: block;
-    background: blue;
-    left: 0;
-    top: 75px;
+    font-family: "Times New Roman", Times, serif;
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    transition: all 15s ease-in;
+    height: 100vh;
+    padding: 2rem;
   }
 
-  .home,
-  .blog-nav,
-  .contact-nav {
-    padding: 32px;
-    color: white;
-    width: 100%;
-    text-align: center;
-    transition: all 0.15s ease-in;
-    cursor: pointer;
+  .navbar .nav--links {
+    display: none;
   }
 
   .mobile-menu-icon {
-    display: block;
+    display: flex;
     position: absolute;
     font-size: 30px;
     border: none;
     outline: none;
-    top: 15px;
+    top: 1.5rem;
     right: 25px;
+    cursor: pointer;
+    background: none;
   }
 
   /* //////////////////content box styling////////////////// */
@@ -637,42 +557,44 @@ li:hover {
   }
 
   .slide--1 {
-    height: 360px;
+    height: 300px;
   }
 
   .innerContent {
     position: relative;
-    top: 8.5rem;
+    top: 9rem;
     padding-left: 1rem;
-    line-height: 1.5;
+    line-height: 0.4;
   }
 
   .innerContent > h4 {
     font-size: 1rem;
+    margin-bottom: 0.2rem;
   }
 
   .innerContent > h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
   }
 
   .innerContent > p {
     color: rgba(255, 255, 255, 0.44);
     margin-bottom: 0.5rem;
-    font-size: 1rem;
-    line-height: 30px;
-    font-weight: 400;
-    width: 40%;
+    font-size: 0.7rem;
+    line-height: 20px;
+    font-weight: 200;
+    width: 35%;
   }
 
   .prevArrow {
     left: -2rem;
-    top: 9rem;
+    top: 7rem;
     z-index: 99;
   }
 
   .NextArrow {
     right: -2rem;
-    top: 9rem;
+    top: 7rem;
     z-index: 99;
   }
 
@@ -718,7 +640,7 @@ li:hover {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .get-in-touch h4 {
     margin-bottom: 0.3rem;

@@ -2,11 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import vectors from "./assets/Vector.svg";
 import vector1 from "./assets/Vector-l.svg";
+
 const Story = (props) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -30,12 +31,9 @@ const Story = (props) => {
       {/* slider--1 */}
       <Slider ref={slider} {...settings}>
         <div className="slide--1" style={{ width: "100rem", height: "30rem" }}>
-          <div
-            className="carousel-real"
-            style={{ backgroundImage: `url(${props.backgroundImage})` }}
-            {...settings}
-          >
+          <div className="carousel-real" {...settings}>
             <div className="overlay "></div>
+
             <div className="innerContent">
               <h4>{props.useDate}</h4>
 

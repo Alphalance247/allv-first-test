@@ -12,7 +12,6 @@ import add from "./assets/Add.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Route, Routes } from "react-router-dom";
-// import Nav from "./Nav";
 
 const date = new Date();
 const getDate = date.toDateString();
