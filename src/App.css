@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   padding-left: 5rem;
@@ -35,7 +35,6 @@ li:hover {
   border-bottom: solid #009bc0;
 }
 
-/* The Content-box Styling */
 
 .content__box {
   text-align: center;
@@ -74,7 +73,6 @@ li:hover {
   color: #000000;
 }
 
-/* ///////////////// carousel section//////////////// */
 
 .slider {
   position: relative;
@@ -135,7 +133,6 @@ li:hover {
   width: 90%;
 }
 
-/* ///////////////////////////csss carousel//////////////////////////// */
 .prevArrow {
   border: none;
   background: none;
@@ -154,7 +151,6 @@ li:hover {
   cursor: pointer;
 }
 
-/* Footer styling */
 
 .Footer {
   background: #1b3854;
@@ -197,7 +193,6 @@ li:hover {
   font-size: 1.5rem;
 }
 
-/* /////////Styling the blog section//////////// */
 .Blog {
   margin-top: 5rem;
   text-align: start;
@@ -258,7 +253,6 @@ li:hover {
   cursor: pointer;
 }
 
-/* ////////////////RESPONSIVENESS FOR TAB//////////////// */
 
 @media only screen and (max-width: 75rem) {
   .navbar {
@@ -294,7 +288,6 @@ li:hover {
     margin: auto;
   }
 
-  /* //////////// responsive-carousel////////////////// */
 
   .innerContent > h4 {
     font-size: 1.3rem;
@@ -313,7 +306,6 @@ li:hover {
     width: 70%;
   }
 
-  /* /////////////////blog section styling///////////////// */
   .Blog {
     margin-top: 4rem;
     width: 70%;
@@ -348,7 +340,6 @@ li:hover {
     font-size: 1.2rem;
   }
 
-  /* //////////////content box//////////////////// */
   .content__box {
     text-align: center;
     margin-top: 3rem;
@@ -365,7 +356,6 @@ li:hover {
     font-size: 2rem;
   }
 
-  /* /////////////////////carousel slider///////////////////// */
 
   .slider {
     position: relative;
@@ -405,7 +395,7 @@ li:hover {
   }
 
   .prevArrow {
-    left: -6rem;
+    left: -2.5rem;
     top: 9rem;
   }
 
@@ -414,7 +404,15 @@ li:hover {
     top: 9rem;
   }
 
-  /* Footer styling */
+  .prevArrow img {
+    width: 2.5rem;
+    height: 4rem;
+  }
+
+  .NextArrow img {
+    width: 2.5rem;
+    height: 4rem;
+  }
 
   .Footer {
     margin-top: 6rem;
@@ -432,7 +430,6 @@ li:hover {
     font-size: 1.3rem;
   }
 
-  /* //////////////////the blog styling////////////////// */
 
   .Blog {
     margin-top: 4rem;
@@ -524,7 +521,6 @@ li:hover {
     background: none;
   }
 
-  /* //////////////////content box styling////////////////// */
   .content__box {
     text-align: center;
     margin-top: 2rem;
@@ -547,7 +543,6 @@ li:hover {
     margin-bottom: 1.5rem;
   }
 
-  /* //////////////////slider styling////////////////// */
   .slider {
     position: relative;
     width: 80%;
@@ -607,7 +602,6 @@ li:hover {
     width: 1rem;
     height: 4rem;
   }
-  /* //////////////////blog post styling////////////////// */
 
   .Blog h1 {
     font-size: 2.5rem;
@@ -631,7 +625,6 @@ li:hover {
     right: -4rem;
     width: 4rem;
   }
-  /* /////////////// the border styling///////////// */
   .Footer {
     margin-top: 4rem;
     padding-top: 2rem;
@@ -668,4 +661,4 @@ li:hover {
   .contact h3 {
     font-size: 1.5rem;
   }
-}
+} */

@@ -1,7 +1,8 @@
-import logos from "./assets/a-logo.svg";
-import facebook from "./assets/facebook.svg";
-import twitter from "./assets/titter.svg";
-import instagram from "./assets/instagram.svg";
+import logos from "../assets/a-logo.svg";
+import facebook from "../assets/facebook.svg";
+import twitter from "../assets/titter.svg";
+import instagram from "../assets/instagram.svg";
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -10,6 +11,7 @@ const Footer = () => {
         <img src={logos} alt="" />
         <p>Product of Alluvium Labs</p>
       </div>
+
       <div className="get-in-touch">
         <h4>Get in touch</h4>
         <div className="footer-social">
@@ -18,6 +20,7 @@ const Footer = () => {
           <img src={instagram} alt="" />
         </div>
       </div>
+
       <div className="contact">
         <h3>Contact us</h3>
         <p className="lorem">

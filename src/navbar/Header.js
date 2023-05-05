@@ -1,6 +1,7 @@
-import logos from "./assets/logoimage.svg";
+import logos from "../assets/logoimage.svg";
 import { Link } from "react-router-dom";
 import react from "react";
+import "./navbar.scss";
 
 const Header = () => {
   const [activeLink, setActiveLink] = react.useState("");

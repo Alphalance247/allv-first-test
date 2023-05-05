@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./Header";
-import Content from "./Content";
-import Story from "./Story";
-import Footer from "./Footer";
-import Blog from "./Blog";
+import Header from "./navbar/Header";
+import Content from "./content/Content";
+import Story from "./Story/Story";
+import Footer from "./footer/Footer";
+import Blog from "./blog/Blog";
 import vectors from "./assets/Vector.svg";
 import vector1 from "./assets/Vector-l.svg";
 import unsplash from "./assets/unsplash.svg";

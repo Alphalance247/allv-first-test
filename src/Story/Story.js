@@ -1,7 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import vectors from "./assets/Vector.svg";
-import vector1 from "./assets/Vector-l.svg";
+import vectors from "../assets/Vector.svg";
+import vector1 from "../assets/Vector-l.svg";
+import "./story.scss";
 
 const Story = (props) => {
   const settings = {

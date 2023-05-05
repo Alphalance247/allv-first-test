@@ -1,3 +1,5 @@
+import "./content.scss";
+
 const Content = () => {
   return (
     <div className="content__box">

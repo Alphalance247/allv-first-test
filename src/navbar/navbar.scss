@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+
+  @media only screen and (max-width: 75rem) {
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+
+  @media only screen and (max-width: 40rem) {
+    display: block;
+    padding: 0;
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+  }
+
+  img {
+    @media only screen and (max-width: 40rem) {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      padding-top: 1rem;
+      width: 6rem;
+      height: 4rem;
+    }
+  }
+
+  .mobile-menu-icon {
+    display: none;
+
+    @media only screen and (max-width: 40rem) {
+      display: flex;
+      position: absolute;
+      font-size: 30px;
+      border: none;
+      outline: none;
+      top: 1.5rem;
+      right: 25px;
+      cursor: pointer;
+      background: none;
+    }
+  }
+
+  .nav--links-mobile {
+    @media only screen and (max-width: 40rem) {
+      list-style: none;
+      display: block;
+      font-family: "Times New Roman", Times, serif;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100vh;
+      padding: 2rem;
+    }
+  }
+
+  .nav--links {
+    list-style: none;
+    display: flex;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+
+    @media only screen and (max-width: 40rem) {
+      display: none;
+    }
+
+    .Active__link {
+      color: black;
+      border-bottom: solid #009bc0;
+    }
+
+    li:hover {
+      border-bottom: solid #009bc0;
+    }
+  }
+
+  .Nav__link {
+    margin-right: 2.5em;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: 75rem) {
+      margin-right: 2.5em;
+      line-height: 30px;
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: 40rem) {
+      color: white;
+      margin-right: 2.5em;
+      line-height: 36px;
+      font-size: 24px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
