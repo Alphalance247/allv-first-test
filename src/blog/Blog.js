@@ -1,3 +1,5 @@
+import "./blog.scss";
+
 const Blog = (props) => {
   return (
     <div className="Blog">
