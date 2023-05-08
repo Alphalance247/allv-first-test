@@ -11,6 +11,7 @@ import add from "./assets/Add.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Route, Routes } from "react-router-dom";
+import ContentModule from "../src/content/Content.module.scss";
 
 const date = new Date();
 const getDate = date.toDateString();
@@ -26,7 +27,7 @@ function App() {
           element={
             <div>
               <Content />
-              <h1 className="Stories__head">Top Stories</h1>
+              <h1 className={ContentModule.Stories__head}>Top Stories</h1>
               <Story
                 useDate={getDate}
                 teamWork="The Importance Of Team Work"

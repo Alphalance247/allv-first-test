@@ -1,7 +1,7 @@
 import logos from "../assets/logoimage.svg";
 import { Link } from "react-router-dom";
 import react from "react";
-import "./navbar.scss";
+import NavModule from "./navbar.module.scss";
 
 const Header = () => {
   const [activeLink, setActiveLink] = react.useState("");
@@ -16,10 +16,10 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar">
-      <div className="nav--button">
+    <div className={NavModule.navbar}>
+      <div className={NavModule.navButton}>
         <img height={50} src={logos} alt="Alluvium" />
-        <button className="mobile-menu-icon" onClick={handleMenu}>
+        <button className={NavModule.mobileMenuIcon} onClick={handleMenu}>
           {showMenu ? (
             <i className="fas fa-times"></i>
           ) : (
@@ -29,19 +29,21 @@ const Header = () => {
       </div>
 
       <ul
-        className={showMenu ? "nav--links-mobile" : "nav--links"}
+        className={showMenu ? NavModule.navLinksMobile : NavModule.navLinks}
         onClick={() => setShowMenu(false)}
       >
         <Link
-          className={`Nav__link ${activeLink === "/" ? "Active__link" : ""}`}
+          className={`${NavModule.Nav__link} ${
+            activeLink === "/" ? NavModule.Active__link : ""
+          }`}
           to="/"
           onClick={() => handleClick("/")}
         >
           <li>HOME</li>
         </Link>
         <Link
-          className={`Nav__link ${
-            activeLink === "/Blog" ? "Active__link" : ""
+          className={`${NavModule.Nav__link} ${
+            activeLink === "/Blog" ? NavModule.Active__link : ""
           }`}
           to="/Blog"
           onClick={() => handleClick("/Blog")}
@@ -49,8 +51,8 @@ const Header = () => {
           <li>BLOG</li>
         </Link>
         <Link
-          className={`Nav__link  ${
-            activeLink === "/Contact" ? "Active__link" : ""
+          className={`${NavModule.Nav__link}  ${
+            activeLink === "/Contact" ? NavModule.Active__link : ""
           }`}
           to="/Contact"
           onClick={() => handleClick("/Contact")}

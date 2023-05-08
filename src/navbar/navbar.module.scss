@@ -26,7 +26,7 @@
     }
   }
 
-  .mobile-menu-icon {
+  .mobileMenuIcon {
     display: none;
 
     @media only screen and (max-width: 40rem) {
@@ -42,7 +42,7 @@
     }
   }
 
-  .nav--links-mobile {
+  .navLinksMobile {
     @media only screen and (max-width: 40rem) {
       list-style: none;
       display: block;
@@ -54,7 +54,7 @@
     }
   }
 
-  .nav--links {
+  .navLinks {
     list-style: none;
     display: flex;
     font-family: "Times New Roman", Times, serif;

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import vectors from "../assets/Vector.svg";
 import vector1 from "../assets/Vector-l.svg";
-import "./story.scss";
+import StoryModule from "./story.module.scss";
 
 const Story = (props) => {
   const settings = {
@@ -16,26 +16,29 @@ const Story = (props) => {
   const slider = React.useRef(null);
 
   return (
-    <div className="slider">
+    <div className={StoryModule.slider}>
       <button
-        className="prevArrow"
+        className={StoryModule.prevArrow}
         onClick={() => slider?.current?.slickPrev()}
       >
         <img src={vector1} alt="" />
       </button>
       <button
-        className="NextArrow"
+        className={StoryModule.NextArrow}
         onClick={() => slider?.current?.slickNext()}
       >
         <img src={vectors} alt="" />
       </button>
       {/* slider--1 */}
       <Slider ref={slider} {...settings}>
-        <div className="slide--1" style={{ width: "100rem", height: "30rem" }}>
-          <div className="carousel-real" {...settings}>
-            <div className="overlay "></div>
+        <div
+          className={StoryModule.slide1}
+          style={{ width: "100rem", height: "30rem" }}
+        >
+          <div className={StoryModule.carouselReal} {...settings}>
+            <div className={StoryModule.overlay}></div>
 
-            <div className="innerContent">
+            <div className={StoryModule.innerContent}>
               <h4>{props.useDate}</h4>
 
               <h2>{props.teamWork}</h2>
@@ -47,14 +50,14 @@ const Story = (props) => {
 
         {/* slider--2 */}
 
-        <div className="slide--1">
+        <div className={StoryModule.slide1}>
           <div
-            className="carousel-real"
+            className={StoryModule.carouselReal}
             style={{ backgroundImage: `url(${props.backgroundImage})` }}
             {...settings}
           >
-            <div className="overlay "></div>
-            <div className="innerContent">
+            <div className={StoryModule.overlay}></div>
+            <div className={StoryModule.innerContent}>
               <h4>{props.useDate}</h4>
 
               <h2>{props.teamWork}</h2>
@@ -65,14 +68,14 @@ const Story = (props) => {
         </div>
         {/* slider--3 */}
 
-        <div className="slide--1">
+        <div className={StoryModule.slide1}>
           <div
-            className="carousel-real"
+            className={StoryModule.carouselReal}
             style={{ backgroundImage: `url(${props.backgroundImage})` }}
             {...settings}
           >
-            <div className="overlay "></div>
-            <div className="innerContent">
+            <div className={StoryModule.overlay}></div>
+            <div className={StoryModule.innerContent}>
               <h4>{props.useDate}</h4>
 
               <h2>{props.teamWork}</h2>
@@ -83,14 +86,14 @@ const Story = (props) => {
         </div>
         {/* slider--4 */}
 
-        <div className="slide--1">
+        <div className={StoryModule.slide1}>
           <div
-            className="carousel-real"
+            className={StoryModule.carouselReal}
             style={{ backgroundImage: `url(${props.backgroundImage})` }}
             {...settings}
           >
-            <div className="overlay"></div>
-            <div className="innerContent">
+            <div className={StoryModule.overlay}></div>
+            <div className={StoryModule.innerContent}>
               <h4>{props.useDate}</h4>
 
               <h2>{props.teamWork}</h2>

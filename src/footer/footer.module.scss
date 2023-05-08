@@ -25,13 +25,13 @@
     gap: 2.5rem;
   }
 
-  .alluvim--lab {
+  .alluvimLab {
     p {
       color: rgba(255, 255, 255, 0.44);
     }
   }
 
-  .get-in-touch {
+  .getInTouch {
     h4 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
@@ -45,7 +45,7 @@
       }
     }
 
-    .footer-social {
+    .footerSocial {
       display: flex;
 
       @media only screen and (max-width: 40rem) {
@@ -95,5 +95,3 @@
     }
   }
 }
-
-/* /////////Styling the blog section//////////// */
