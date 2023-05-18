@@ -1,19 +1,23 @@
-import logos from "../assets/logoimage.svg";
+import logos from "../../assets/logoimage.svg";
 import { Link } from "react-router-dom";
 import react from "react";
 import NavModule from "./navbar.module.scss";
+import React from "react";
 
 const Header = () => {
   const [activeLink, setActiveLink] = react.useState("");
   const [showMenu, setShowMenu] = react.useState(false);
 
-  const handleClick = (link) => {
-    setActiveLink(link);
-  };
+  const handleClick = React.useCallback(
+    (link) => {
+      setActiveLink(link);
+    },
+    [activeLink]
+  );
 
-  const handleMenu = () => {
+  const handleMenu = React.useCallback(() => {
     setShowMenu(!showMenu);
-  };
+  }, [showMenu]);
 
   return (
     <div className={NavModule.navbar}>

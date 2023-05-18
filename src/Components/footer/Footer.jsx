@@ -1,7 +1,7 @@
-import logos from "../assets/a-logo.svg";
-import facebook from "../assets/facebook.svg";
-import twitter from "../assets/titter.svg";
-import instagram from "../assets/instagram.svg";
+import logos from "../../assets/a-logo.svg";
+import facebook from "../../assets/facebook.svg";
+import twitter from "../../assets/titter.svg";
+import instagram from "../../assets/instagram.svg";
 import FooterModule from "./footer.module.scss";
 
 const Footer = () => {
